@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:wght@400;700&display=swap');
+:root {
+  --purple-color: #5f27cd;
+  --pink-color: #ff6b6b;
+  --gray-color: #c8d6e5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+h1 + h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+}
+h1 {
+  background: linear-gradient(180%, --purple-color, --pink-color);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+p {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+}
+ul {
+  list-style-type: none;
+}
+
+/* Reusable Classes */
+.container {
+  width: 100%;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.flex > * {
+  flex: 1;
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btn {
+  display: inline-block;
+  border: 2px solid var(--purple-color);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.text-pink {
+  color: var(--pink-color);
+}
+
+/* Header Section */
+.header-section nav {
+  background-color: var(--purple-color);
+  color: white;
+  padding-block: 1rem;
+}
+.header-section nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header-section nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header-section nav .logo img {
+  width: 30px;
+}
+.header-section nav .logo > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.header-section nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header-section nav ul [href="#login"] {
+  display: inline-block;
+  background-color: var(--pink-color);
+  color: black;
+  padding: 8px 15px;
+  border-radius: 3px;
+}
+
+/* Container's Media Queries */
+@media screen and (min-width: 640px) {
+  .container {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding-inline: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-inline: 4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-inline: 5rem;
+  }
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 640px) {
+  .header-section nav .container, .header-section nav ul {
+    flex-direction: column;
+  }
+  .header-section nav ul [href="#login"] {
+    width: 100vw;
+    text-align: center;
+    border-radius: 0;
+  }
+}
