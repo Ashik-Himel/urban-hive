@@ -275,6 +275,48 @@ ul {
   font-weight: 700;
 }
 
+/* Review Section */
+.review-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.review-section .card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.review-section .card {
+  background-color: var(--pink-color);
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+}
+.review-section .card .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.review-section .profile div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: calc(100% - 50px);
+}
+.review-section .card h3 {
+  margin-bottom: 0;
+}
+.review-section .card img {
+  width: 50px;
+  height: auto;
+  margin-left: 0;
+}
+.review-section .card p {
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 /* Container's Media Queries */
 @media screen and (min-width: 640px) {
   .container {
@@ -299,7 +341,8 @@ ul {
 
 /* Responsive Media Queries */
 @media screen and (max-width: 1280px) {
-  .products-section .card-container {
+  .products-section .card-container,
+  .review-section .card-container {
     grid-template-columns: repeat(3, 1fr);
   }
   .discount-section .discount-img span {
@@ -307,7 +350,8 @@ ul {
   }
 }
 @media screen and (max-width: 1024px) {
-  .products-section .card-container {
+  .products-section .card-container,
+  .review-section .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
   .discount-section .discount-img span {
@@ -335,7 +379,8 @@ ul {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-  .products-section .card-container {
-    grid-template-columns: repeat(1, 1fr);
+  .products-section .card-container,
+  .review-section .card-container {
+    grid-template-columns: 1fr;
   }
 }
