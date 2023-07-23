@@ -100,15 +100,15 @@ ul {
   align-items: center;
   gap: 1.5rem;
 }
-.header-section nav .logo {
-  display: flex;
+.logo {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
-.header-section nav .logo img {
+.logo img {
   width: 30px;
 }
-.header-section nav .logo > span {
+.logo > span {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -315,6 +315,20 @@ ul {
   color: black;
   margin-top: 1rem;
   margin-bottom: 0;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: var(--purple-color);
+  color: white;
+  margin-top: 4rem;
+  padding-block: 6rem;
+  text-align: center;
+}
+.footer-section p {
+  margin-top: 0.7rem;
+  margin-bottom: 0;
+  color: white;
 }
 
 /* Container's Media Queries */
