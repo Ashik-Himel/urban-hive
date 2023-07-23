@@ -18,17 +18,20 @@ body {
   font-weight: 400;
 }
 h1, h2, h3 {
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 h1 + h2 {
   font-family: 'Dancing Script', cursive;
   font-weight: 400;
+  margin-bottom: 1rem;
 }
 h1 {
-  background: linear-gradient(180%, --purple-color, --pink-color);
+  background-image: linear-gradient(var(--purple-color), var(--pink-color));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  font-size: 3rem;
 }
 p {
   color: #333;
@@ -75,6 +78,11 @@ ul {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: var(--purple-color);
+  color: white;
 }
 .text-pink {
   color: var(--pink-color);
@@ -118,6 +126,61 @@ ul {
   border-radius: 3px;
 }
 
+/* Banner Section */
+.banner-section {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.banner-section .flex {
+  background-color: var(--gray-color);
+  border-radius: 10px;
+}
+.banner-section .banner-img {
+  align-self: stretch;
+}
+.banner-section .banner-img img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-section .banner-info {
+  padding: 2rem 1rem;
+}
+.banner-section .banner-info > * {
+  text-align: center;
+  margin-inline: auto;
+  width: max-content;
+}
+.banner-section .social-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+.banner-section .social-icons i {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.banner-section .social-icons i:hover {
+  transform: scale(1.4);
+}
+.banner-section .social-icons i:nth-child(1) {
+  color: #3b5998;
+}
+.banner-section .social-icons i:nth-child(2) {
+  color: #00acee;
+}
+.banner-section .social-icons i:nth-child(3) {
+  color: #c4302b;
+}
+.banner-section .social-icons i:nth-child(4) {
+  background-image: linear-gradient(to bottom left, #833AB4, #C13584, #FD1D1D, #F77737);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 /* Container's Media Queries */
 @media screen and (min-width: 640px) {
   .container {
@@ -142,12 +205,19 @@ ul {
 
 /* Responsive Media Queries */
 @media screen and (max-width: 640px) {
-  .header-section nav .container, .header-section nav ul {
+  .header-section nav .container,
+  .header-section nav ul,
+  .banner-section .flex {
     flex-direction: column;
   }
   .header-section nav ul [href="#login"] {
     width: 100vw;
     text-align: center;
     border-radius: 0;
+  }
+  .banner-section .banner-img img {
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }
